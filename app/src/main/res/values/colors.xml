@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <!-- begin Themes -->
+
+    <!-- Theme lightHappyGreen  -->
+    <color name="elementDiaryColor">#8EE4AF</color>
+    <color name="elementDiaryColorDescription">#AAEABF</color>
+
+
+    <!-- Theme punkRock -->
+    <color name="elementDiaryColorPunkRock">#7c6f7c</color>
+    <color name="elementDiaryColorDescriptionPunkRock">#d65bcb</color>
+
+
+    <!-- SkyBlue -->
+    <color name="elementDiaryColorSkyBlue">#59dcdc</color>
+    <color name="elementDiaryColorDescriptionSkyBlue">#5a7687</color>
+
+    <!-- classic-->
+    <color name="elementDiaryColorClassic">#cacfcf</color>
+    <color name="elementDiaryColorDescriptionClassic">#fafafa</color>
+
+    <!-- end Themes-->
+
+
+
+    <color name="italicWhite">#FFFFFF</color>
+    <color name="italicBlack">#000000</color>
+
+
+
+
+    <color name="coolGray">#B0B0B0</color>
+
+    <color name="softGray1">#EBEBEB</color>
+
+
+</resources>
