@@ -7,7 +7,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.achraf.mydiaries.DB.AccesDataOption;
@@ -17,157 +19,93 @@ import com.example.achraf.mydiaries.R;
 
 public class PasswordCheckerActivity extends AppCompatActivity {
 
-    private EditText p1,p2,p3,p4;
+    private Button b1,b2,b3,b4,b5,b6,b7,b8,b9;
     private AccesDataOption accesDataOption;
 
     private String toRedirect = "";
+    private String password = "";
+
+    private TextView passwordToShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_password_checker);
 
-        p1 = findViewById(R.id.new_1);
-        p2 = findViewById(R.id.new_2);
-        p3 = findViewById(R.id.new_3);
-        p4 = findViewById(R.id.new_4);
+        b1 = findViewById(R.id.b1);
+        b2 = findViewById(R.id.b2);
+        b3 = findViewById(R.id.b3);
+        b4 = findViewById(R.id.b4);
+        b5 = findViewById(R.id.b5);
+        b6 = findViewById(R.id.b6);
+        b7 = findViewById(R.id.b7);
+        b8 = findViewById(R.id.b8);
+        b9 = findViewById(R.id.b9);
+
+        passwordToShow = findViewById(R.id.passwordToShow);
 
         accesDataOption = new AccesDataOption(this);
         //accesDataOption.updateOption("password","1111");
+
+
 
 
         Intent intent = getIntent();
         toRedirect = intent.getStringExtra("toRedirect");
 
 
-        p1.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                p1.setFocusable(false);
-                p2.setSelection(0);
-                p1.setFocusable(true);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                p1.setFocusable(false);
-                p2.setSelection(0);
-                p1.setFocusable(true);
-
-
-
-            }
-        });
-        p2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                p2.setFocusable(false);
-                p3.setSelection(0);
-                p2.setFocusable(true);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                p2.setFocusable(false);
-                p3.setSelection(0);
-                p2.setFocusable(true);
-            }
-        });
-        p3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                p3.setFocusable(false);
-                p4.setSelection(0);
-                p3.setFocusable(true);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                p3.setFocusable(false);
-                p4.setSelection(0);
-                p3.setFocusable(true);
-
-            }
-        });
-        p4.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                p4.setFocusable(false);
-                p1.setSelection(0);
-                p4.setFocusable(true);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                p4.setFocusable(false);
-                p1.setSelection(0);
-                p4.setFocusable(true);
-
-            }
-        });
-
     }
-    public void check(View view){
-        String passwordToCheck = p1.getText().toString() + p2.getText().toString() +
-                p3.getText().toString() + p4.getText().toString();
-
-        Log.d("ach1",accesDataOption.getOption("password"));
-        Log.d("ach1",passwordToCheck);
 
 
-        if(!accesDataOption.getOption("password").equals(passwordToCheck)){
-           Toast t = Toast.makeText(this,"WRONG PASSWORD !!",Toast.LENGTH_LONG);
-           freeCases();
-           t.show();
-
-
-
-           finish();
-           return;
-        }
-        if(toRedirect.equals("diaryPlayer")){
-            Intent intent = new Intent(this,DiaryPlayer.class);
-            startActivity(intent);
-
-
-            finish();
-        }
-        if(toRedirect.equals("options")){
-            Intent intent = new Intent(this,OptionsActivity.class);
-            startActivity(intent);
-
-            finish();
-        }
-
-
+    public void reset(View view) {
+        password = "";
+        passwordToShow.setText("your password is : "+password);
     }
-    public void freeCases(){
-        p1.setText("");
-        p2.setText("");
-        p4.setText("");
-        p3.setText("");
+
+    public void go(View view) {
+        if(password.equals(accesDataOption.getOption("password"))){
+
+            if(toRedirect.equals("diaryPlayer")){
+                Intent intent = new Intent(this,DiaryPlayer.class);
+                startActivity(intent);
 
 
+                finish();
+            }
+            if(toRedirect.equals("options")){
+                Intent intent = new Intent(this,OptionsActivity.class);
+                startActivity(intent);
+
+                finish();
+            }
+        }else{
+            password = "";
+            Toast t = Toast.makeText(this,"WRONG PASSWORD !!",Toast.LENGTH_LONG);
+            t.show();
+        }
+    }
+
+    public void update(View view) {
+        if(password.length() >= 4){
+            Toast t = Toast.makeText(this,"4 CHARS IS THE LIMIT !!",Toast.LENGTH_LONG);
+            t.show();
+            password = "";
+            passwordToShow.setText("your password is : "+password);
+
+            return;
+
+        }
+        if(view == b1) password += "1";
+        if(view == b2) password += "2";
+        if(view == b3) password += "3";
+        if(view == b4) password += "4";
+        if(view == b5) password += "5";
+        if(view == b6) password += "6";
+        if(view == b7) password += "7";
+        if(view == b8) password += "8";
+        if(view == b9) password += "9";
+
+        passwordToShow.setText("your password is : "+password);
 
     }
 }
