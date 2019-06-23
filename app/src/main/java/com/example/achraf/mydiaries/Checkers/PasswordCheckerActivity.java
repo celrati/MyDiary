@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -31,7 +32,7 @@ public class PasswordCheckerActivity extends AppCompatActivity {
         p3 = findViewById(R.id.new_3);
         p4 = findViewById(R.id.new_4);
 
-        //accesDataOption = new AccesDataOption(this);
+        accesDataOption = new AccesDataOption(this);
         //accesDataOption.updateOption("password","1111");
 
 
@@ -129,6 +130,10 @@ public class PasswordCheckerActivity extends AppCompatActivity {
     public void check(View view){
         String passwordToCheck = p1.getText().toString() + p2.getText().toString() +
                 p3.getText().toString() + p4.getText().toString();
+
+        Log.d("ach1",accesDataOption.getOption("password"));
+        Log.d("ach1",passwordToCheck);
+
 
         if(!accesDataOption.getOption("password").equals(passwordToCheck)){
            Toast t = Toast.makeText(this,"WRONG PASSWORD !!",Toast.LENGTH_LONG);
