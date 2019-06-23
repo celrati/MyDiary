@@ -26,7 +26,8 @@ public class DataBaseOption extends SQLiteOpenHelper {
     public final static String INIT_QUERIES_TABLE = "INSERT INTO table_options " +
             "(option_name,option_value ) VALUES " +
             "('pseudo','owner')," +
-            "('password','0000')";
+            "('password','0000')," +
+            "('secure','OFF')"; // secure is for activate the password or not
 
 
     public static DataBaseOption getInstance(Context context) {

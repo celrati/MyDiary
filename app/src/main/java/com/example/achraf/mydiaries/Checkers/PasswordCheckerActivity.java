@@ -31,7 +31,7 @@ public class PasswordCheckerActivity extends AppCompatActivity {
         p3 = findViewById(R.id.new_3);
         p4 = findViewById(R.id.new_4);
 
-        accesDataOption = new AccesDataOption(this);
+        //accesDataOption = new AccesDataOption(this);
         //accesDataOption.updateOption("password","1111");
 
 

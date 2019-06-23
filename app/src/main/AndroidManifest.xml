@@ -46,7 +46,6 @@
         <activity android:name=".OptionsStuff.PseudoOptionActivity" />
         <activity android:name=".OptionsStuff.PasswordOptionActivity" />
         <activity android:name=".Checkers.PasswordCheckerActivity" />
-        <activity android:name=".OptionsStuff.ThemeOptionActivity"></activity>
     </application>
 
 </manifest>

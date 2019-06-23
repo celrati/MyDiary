@@ -20,7 +20,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.achraf.mydiaries.DB.AccesData;
-import com.example.achraf.mydiaries.Helper.ThemeChangeHelper;
 import com.google.android.gms.ads.AdView;
 
 import java.sql.RowId;

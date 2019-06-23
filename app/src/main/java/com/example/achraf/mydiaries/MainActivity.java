@@ -32,24 +32,36 @@ public class MainActivity extends AppCompatActivity {
 
 
       //  startActivity(new Intent(this,NewDiarieActivity.class));
-       // AccesData accesData = new AccesData(this);
+       AccesData accesData = new AccesData(this);
         //accesData.getDiaries();
-       // accesData.deleteAllDiaries();
+        accesData.deleteAllDiaries();
         //accesData.deleteDiary(26);
 
     }
 
     public void open(View view){
-        Intent intent_password_checker = new Intent(this,PasswordCheckerActivity.class);
-        intent_password_checker.putExtra("toRedirect","diaryPlayer");
-        startActivity(intent_password_checker);
+        if(accesDataOption.getOption("secure").equals("OFF")){
+            Intent intent = new Intent(this,DiaryPlayer.class);
+            startActivity(intent);
+        }else{
+            Intent intent_password_checker = new Intent(this,PasswordCheckerActivity.class);
+            intent_password_checker.putExtra("toRedirect","diaryPlayer");
+            startActivity(intent_password_checker);
+        }
+
     }
 
 
     public void getOption(View view){
-        Intent intent_password_checker = new Intent(this,PasswordCheckerActivity.class);
-        intent_password_checker.putExtra("toRedirect","options");
-        startActivity(intent_password_checker);
+        if(accesDataOption.getOption("secure").equals("OFF")){
+            Intent intent = new Intent(this,OptionsActivity.class);
+            startActivity(intent);
+        }else{
+            Intent intent_password_checker = new Intent(this,PasswordCheckerActivity.class);
+            intent_password_checker.putExtra("toRedirect","options");
+            startActivity(intent_password_checker);
+        }
+
     }
 
     @Override
