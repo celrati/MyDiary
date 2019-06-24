@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.achraf.mydiaries">
+    package="my.example.achraf.mydiaries">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
@@ -18,34 +18,34 @@
             android:value="ca-app-pub-3940256099942544~3347511713"/>
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name="my.example.achraf.mydiaries.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewDiarieActivity" />
+        <activity android:name="my.example.achraf.mydiaries.NewDiarieActivity" />
 
         <provider
-            android:name=".DB.MyContentProvider"
+            android:name="my.example.achraf.mydiaries.DB.MyContentProvider"
             android:authorities="diary.get"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
 
-        <activity android:name=".DiaryPlayer" />
-        <activity android:name=".DiaryEditing" />
-        <activity android:name=".OptionsStuff.OptionsActivity" />
+        <activity android:name="my.example.achraf.mydiaries.DiaryPlayer" />
+        <activity android:name="my.example.achraf.mydiaries.DiaryEditing" />
+        <activity android:name="my.example.achraf.mydiaries.OptionsStuff.OptionsActivity" />
 
         <provider
-            android:name=".DB.MyContentProviderOptions"
+            android:name="my.example.achraf.mydiaries.DB.MyContentProviderOptions"
             android:authorities="diary.option.get"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
 
-        <activity android:name=".OptionsStuff.PseudoOptionActivity" />
-        <activity android:name=".OptionsStuff.PasswordOptionActivity" />
-        <activity android:name=".Checkers.PasswordCheckerActivity" />
+        <activity android:name="my.example.achraf.mydiaries.OptionsStuff.PseudoOptionActivity" />
+        <activity android:name="my.example.achraf.mydiaries.OptionsStuff.PasswordOptionActivity" />
+        <activity android:name="my.example.achraf.mydiaries.Checkers.PasswordCheckerActivity" />
     </application>
 
 </manifest>

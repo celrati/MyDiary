@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiaryPlayer"
+    tools:context="my.example.achraf.mydiaries.DiaryPlayer"
     android:orientation="vertical"
     android:layout_weight="1.0">
 
