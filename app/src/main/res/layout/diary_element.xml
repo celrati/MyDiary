@@ -10,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginHorizontal="7dp"
-        android:layout_marginVertical="4dp"
-        android:elevation="10dp"
-        android:background="@drawable/top_diary_shape"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="10dp"
+        android:elevation="5dp"
+        android:background="@drawable/show_cadre_diary"
         android:id="@+id/diary">
 
         <LinearLayout
@@ -22,7 +22,7 @@
             android:orientation="horizontal"
             android:weightSum="1.0"
             android:id="@+id/upperTop"
-            android:padding="1dp"
+            android:padding="10dp"
 
             >
 
@@ -32,7 +32,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/dateElement"
                 android:text="test1"
-                android:textSize="23dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
 
                 />
@@ -60,7 +60,7 @@
                 android:layout_weight="0.5"
                 android:layout_height="wrap_content"
                 android:text="hi"
-                android:padding="10dp"
+                android:padding="1dp"
 
                 android:id="@+id/descriptionElement"
                 android:textSize="15dp"
