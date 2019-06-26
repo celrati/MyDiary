@@ -1,5 +1,6 @@
 package my.example.achraf.mydiaries.OptionsStuff;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,8 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import my.example.achraf.mydiaries.DB.AccesDataOption;
+import my.example.achraf.mydiaries.DiaryPlayer;
+import my.example.achraf.mydiaries.MainActivity;
 import my.example.achraf.mydiaries.R;
 
 public class PasswordOptionActivity extends AppCompatActivity {
@@ -47,12 +50,18 @@ public class PasswordOptionActivity extends AppCompatActivity {
 
             Log.d("ach",accesDataOption.getOption("password"));
 
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+
             Toast t = Toast.makeText(this,"you just changed your password :)",Toast.LENGTH_LONG);
             t.show();
+
 
         }else if(offPass.isChecked()){
             // off password
             accesDataOption.updateOption("secure","OFF");
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
             Toast t = Toast.makeText(this,"you disable the secure mode",Toast.LENGTH_LONG);
             t.show();
         }

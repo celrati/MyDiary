@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="my.example.achraf.mydiaries.NewDiarieActivity"
     android:orientation="vertical">
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_alignParentStart="true"
@@ -31,9 +30,8 @@
             android:layout_height="0dp"
             android:layout_weight="0.9"
             android:orientation="vertical"
-            android:background="@drawable/top_diary_shape"
-            android:elevation="20dp"
 
+            android:elevation="20dp"
             android:weightSum="1.0"
             android:layout_marginTop="10dp"
             >
@@ -42,34 +40,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.1"
+                android:text="date"
 
-                android:background="@drawable/top_diary_shape"
-
-                android:id="@+id/date"
-                android:paddingVertical="7dp"
-                android:paddingLeft="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="5dp"
-                android:textSize="20dp"
                 android:elevation="20dp"
+                android:id="@+id/date"
+                android:textStyle="italic"
+
+
+                android:paddingVertical="0dp"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="0dp"
+                android:textSize="25dp"
 
                 android:textColor="@color/italicBlack"
                 />
+
             <EditText
+                android:id="@+id/story"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginRight="0dp"
                 android:layout_weight="0.9"
                 android:background="@drawable/top_diary_shape"
-                android:hint="new story ;) ..."
-                android:id="@+id/story"
-                android:elevation="20dp"
-
-                android:layout_marginRight="5dp"
+                android:elevation="2dp"
                 android:gravity="start"
+                android:paddingHorizontal="10dp"
                 android:paddingTop="20dp"
-                android:paddingHorizontal="15dp"
-                />
+                android:text="story" />
 
 
 
@@ -80,7 +79,7 @@
             android:layout_weight="0.1"
             android:text="save"
             android:onClick="save"
-            android:background="@drawable/shape_button_modify"/>
+            android:background="@drawable/show_cadre_diary"/>
 
     </LinearLayout>
 

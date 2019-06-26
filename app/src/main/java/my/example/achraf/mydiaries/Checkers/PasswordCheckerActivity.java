@@ -15,7 +15,7 @@ import my.example.achraf.mydiaries.R;
 
 public class PasswordCheckerActivity extends AppCompatActivity {
 
-    private Button b1,b2,b3,b4,b5,b6,b7,b8,b9;
+    private Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b0;
     private AccesDataOption accesDataOption;
 
     private String toRedirect = "";
@@ -37,6 +37,7 @@ public class PasswordCheckerActivity extends AppCompatActivity {
         b7 = findViewById(R.id.b7);
         b8 = findViewById(R.id.b8);
         b9 = findViewById(R.id.b9);
+        b0 = findViewById(R.id.b0);
 
         passwordToShow = findViewById(R.id.passwordToShow);
 
@@ -100,6 +101,8 @@ public class PasswordCheckerActivity extends AppCompatActivity {
         if(view == b7) password += "7";
         if(view == b8) password += "8";
         if(view == b9) password += "9";
+        if(view == b0) password += "0";
+
 
         passwordToShow.setText("your password is : "+password);
 
