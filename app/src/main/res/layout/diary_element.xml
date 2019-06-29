@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
         android:elevation="5dp"
         android:background="@drawable/show_cadre_diary"
         android:id="@+id/diary">
@@ -22,7 +22,7 @@
             android:orientation="horizontal"
             android:weightSum="1.0"
             android:id="@+id/upperTop"
-            android:padding="10dp"
+            android:padding="0dp"
 
             >
 
@@ -32,8 +32,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/dateElement"
                 android:text="test1"
+                android:fontFamily="cursive"
                 android:textSize="30dp"
                 android:textStyle="bold"
+
 
                 />
 

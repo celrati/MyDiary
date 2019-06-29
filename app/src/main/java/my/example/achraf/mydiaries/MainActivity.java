@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
       //  startActivity(new Intent(this,NewDiarieActivity.class));
        AccesData accesData = new AccesData(this);
         //accesData.getDiaries();
-        accesData.deleteAllDiaries();
+        //accesData.deleteAllDiaries();
         //accesData.deleteDiary(26);
 
     }
