@@ -25,8 +25,8 @@ public class NewDiarieActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_diarie);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         date = findViewById(R.id.date);
         story = (EditText)findViewById(R.id.story);
@@ -37,6 +37,7 @@ public class NewDiarieActivity extends AppCompatActivity {
         String dateX = mdformat.format(calendar.getTime());
 
         date.setText(getFormatDate(dateX));
+       // toolbar.setTitle(getFormatDate(dateX));
     }
 
 

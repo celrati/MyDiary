@@ -2,48 +2,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context="my.example.achraf.mydiaries.MainActivity"
     android:orientation="vertical"
-    android:weightSum="1.0">
+    >
 
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:layout_gravity="start"
-        android:layout_marginTop="40dp">
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="0dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Welcome to MyDiaries..."
-            android:layout_marginTop="30dp"
-            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/pinky"
             android:fontFamily="cursive"
-            android:textSize="50sp"
+            android:textSize="65sp"
             android:id="@+id/welcome"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center|bottom"
+        android:gravity="center"
 
-        android:padding="5dp"
+        android:padding="80dp"
         >
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Open My Diary"
-            android:background="@drawable/show_cadre_diary"
+            android:background="@drawable/show_cadre_diary_pinky"
             android:onClick="open"
-            android:fontFamily="cursive"
-            android:layout_marginBottom="10dp"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
 
 
 
@@ -51,30 +51,47 @@
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="0dp"
             android:text="go to options"
-            android:fontFamily="cursive"
-            android:background="@drawable/show_cadre_diary"
+            android:textSize="20sp"
+            android:background="@drawable/show_cadre_diary_pinky"
             android:onClick="getOption"
+            android:textColor="@color/white"
+
 
             />
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
+        android:layout_height="match_parent">
 
-        android:layout_gravity="bottom">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:text="MyDiaries v1.20 2018 - 2019 " />
+            android:layout_alignParentBottom="true"
+            android:text=" My Diary v1.21 2018 - 2019 "
+            android:gravity="end"
+            android:textColor="@color/dark_pinky"
+            />
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--
+
+
+
+
+
+
+
+
+-->
+
+
 
 </LinearLayout>

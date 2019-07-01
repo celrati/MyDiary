@@ -26,8 +26,8 @@ public class DiaryEditing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary_editing);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         story = findViewById(R.id.story);
         date = findViewById(R.id.date);
@@ -36,6 +36,7 @@ public class DiaryEditing extends AppCompatActivity {
         Intent intent = getIntent();
         story.setText(intent.getStringExtra("story"));
         date.setText(intent.getStringExtra("date"));
+
 
     }
 
